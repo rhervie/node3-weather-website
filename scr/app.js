@@ -5,6 +5,9 @@ const hbs = require('hbs')
 const forecast = require('./utlity/forecast')
 const geocode = require('./utlity/geocode')
 
+// Port from Heroku
+const port = process.env.PORT || 3000
+
 // Define paths for Express Path to connect ot the file path
 
 const publicDirectoryPath = path.join(__dirname,'../public')
@@ -101,6 +104,6 @@ app.get('*',(req,res)=>{
         errorMessage:'Page 404 not Found'
     })
 })
-app.listen(3000,()=>{
-    console.log('Serve is up on port 3000')
+app.listen(port,()=>{
+    console.log('Serve is up on port' + port)
 })
