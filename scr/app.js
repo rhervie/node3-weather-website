@@ -104,6 +104,6 @@ app.get('*',(req,res)=>{
         errorMessage:'Page 404 not Found'
     })
 })
-app.listen(port,()=>{
+app.listen(port ,()=>{
     console.log('Serve is up on port' + port)
 })
